@@ -5,7 +5,6 @@ CloudRegistry::Application.routes.draw do
 
   resources :students
 
-
   resources :students do |url|
     resources :urls
   end
