@@ -1,0 +1,6 @@
+{
+  "name": "cs132alab8",
+  "dependencies": {
+    "foundation": "~5.0.2"
+  }
+}
