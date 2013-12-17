@@ -19,9 +19,9 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'compass-rails'
 
+  gem 'zurb-foundation', "= 3.2.5"
   # Upgrade from Foundation 4 to Foundation 5
-  #  gem 'zurb-foundation'
-  gem 'foundation-rails'
+  # gem 'foundation-rails'
 
   gem 'dynamic_form'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
