@@ -15,7 +15,7 @@ class Student < ActiveRecord::Base
     
     # validate that :course is correct
     validCourses = ['CS 132A', 'cs132a', 'CIS 113', 'cis113']
-    validates :couse, inclusion: { in: validCourses,
-                                   message: "You must select your course." }
+    validates :course, inclusion: { in: validCourses,
+                                    message: "You must select your course." }
 
 end
