@@ -1,5 +1,5 @@
 <div class="row">
-  <br>
+  <br />
 </div>
 <div style="background-color:transparent">
   <div class="row">
@@ -14,24 +14,25 @@
       <h4>Link to Your App</h4>
       <p>Use this form to enter the URL for your Ruby Programming Heroku Rails Application. This form is collecting URLs from both of my Ruby courses at <a href="http://hackingthevalley.com/ccsf/ruby">City College of San Francisco</a> and
       <a href="http://hackingthevalley.com/csm/ruby">College of San Mateo.</a></p>
-        <p>Enter your USERID and your HEROKU app.</p>
+      <p>Enter your user ID and your Heroku app.</p>
       <p>Read the <a href="/welcome/assignment">assignment</a>.</p>
-      </div>
     </div>
+  </div>
     <div class="eight columns" style="background-color:#f0f0f0;">
       <h3>Register your Heroku URL</h3>
       <%= form_for @student, :url => {:action => 'create'} do |f| %>
-          <p><%= f.label :COURSE %></p>
+          <p><%= f.label :Course %></p>
           <p><%= f.select :course, options_for_select(['Choose your course',['CS 132A','cs132a'],['CIS 113','cis113']]) %></p>
-          <p><%= f.label :USERID %></p>
-          <p><%= f.text_field :name, :placeholder =>'Your USERID' %></p>
+          <p><%= f.label :UserID %></p>
+          <p><%= f.text_field :name, :placeholder =>'Your user ID' %></p>
           <p><%= f.label :URL %></p>
           <p><input type="url" name="url" placeholder="Heroku URL"/></p>
           <input type="submit" class="round button" value="Register" />
       <% end %>
     </div>
-  </div>
-<div style="margin:1em 0; height:40px;clear:both;"><br></div>
+</div>
+<div style="margin:1em 0; height:40px;clear:both;"><br /></div>
+<!-- 
 <div class="row">
   <div class="twelve columns panel callout">
     <h2>Your output will go here...</h2>
@@ -45,9 +46,9 @@
     </h5>
   </div>
 </div>
-
+-->
 <div class="row">
-    <h4>Registered Links</h4>
+    <h2>Registered Links</h2>
     <table style="width:100%">
         <tr>
             <th>Course</th>
