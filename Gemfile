@@ -39,7 +39,7 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 #  gem 'therubyracer-heroku', :platform => :ruby
-  gem 'therubyracer', :platform => :ruby
+  gem 'therubyracer'
 end
 
 group :test do
