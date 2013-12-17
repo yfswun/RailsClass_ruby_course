@@ -7,8 +7,8 @@ class Url < ActiveRecord::Base
     # Write code the validates urls have a domain name of herokuapp.com.
 
     # domain = 'herokuapp.com'
-    validates :url, format: { with: /.*herokuapp.com\z/i,
-                              message: "The URL must be hosted by Heroku." }
+    # validates :url, format: { with: /.*herokuapp.com\z/i,
+                              # message: "The URL must be hosted by Heroku." }
     
     # validates :url, uniqueness: { case_sensitive: false
                                 # , message: "This URL has already been registered." }
