@@ -1,6 +1,21 @@
 <div class="row">
   <div class="four columns centered">
 <div class="row">
+
+<div class="twelve columns centered panel">
+    <h2>Error List</h2>
+    <% if @student.errors.any? %>
+      <div>
+        <h2><%= pluralize(@student.errors.count, "error") %> prohibited this registration from being saved:</h2>
+        <ul>
+            <% @student.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+        </ul>
+      </div>
+    <% end %>
+</div>
+
   <div class="twelve columns centered panel">
 <h2>Error</h2>
 <p>To enter your URL into this form, you must 
