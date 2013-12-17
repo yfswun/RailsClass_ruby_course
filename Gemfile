@@ -38,7 +38,8 @@ gem 'jquery-rails'
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'therubyracer-heroku', :platform => :ruby
+#  gem 'therubyracer-heroku', :platform => :ruby
+  gem 'therubyracer', :platform => :ruby
 end
 
 group :test do
