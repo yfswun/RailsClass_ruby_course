@@ -54,12 +54,12 @@
             <th>Student ID</th>
             <th>URL</th>
         </tr>
-        <% @students.each do |s| %>
-            <% s.urls.each do |u| %>
+        <% @students.each do |student| %>
+            <% student.urls.each do |studentURL| %>
                 <tr>
-                    <td><%= s.name %></td>
-                    <td><%= s.course %></td>
-                    <td><a href="<%= u.url %>"><%= u %></a></td>
+                    <td><%= student.name %></td>
+                    <td><%= student.course %></td>
+                    <td><a href="<%= studentURL.url %>"><%= studentURL.url %></a></td>
                 </tr>
             <% end %>
         <% end %>

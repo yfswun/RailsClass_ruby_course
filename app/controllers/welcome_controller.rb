@@ -8,6 +8,7 @@ class WelcomeController < ApplicationController
 
     # Student.joins(:urls)
     @students = Student.all
+    @urls = Url.all
 
     # We will be creating a new student object to use with Register URL form
     @student = Student.new 
