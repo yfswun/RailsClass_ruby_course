@@ -10,7 +10,7 @@ class Url < ActiveRecord::Base
     validates :url, format: { with: /.*herokuapp.com\z/i
                             , message: "The URL must be hosted by Heroku." }
     
-    validates :url, uniqueness: { case_sensitive: false
-                                , message: "This URL has already been registered." }
+    # validates :url, uniqueness: { case_sensitive: false
+                                # , message: "This URL has already been registered." }
     
 end

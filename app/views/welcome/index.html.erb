@@ -55,13 +55,13 @@
             <th>URL</th>
         </tr>
         <% @students.each do |name, course| %>
-            <% @urls.each do |url| %>
+            <!-- <% @urls.each do |url| %> -->
                 <tr>
                     <td><%= name %></td>
                     <td><%= course %></td>
-                    <td><%= url %></td>
+                    <td><%= name.url %></td>
                 </tr>
-            <% end %>
+            <!-- <% end %> -->
         <% end %>
     </table>
 </div>

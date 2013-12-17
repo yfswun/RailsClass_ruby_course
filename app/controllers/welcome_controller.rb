@@ -6,6 +6,9 @@ class WelcomeController < ApplicationController
   # GET /urls.json
   def index
 
+    # Student.joins(:urls)
+    @students = Student.all
+
     # We will be creating a new student object to use with Register URL form
     @student = Student.new 
     

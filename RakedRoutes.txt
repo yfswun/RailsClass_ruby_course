@@ -1,0 +1,35 @@
+﻿welcome_register GET    /welcome/register(.:format)                   welcome#register
+            urls GET    /urls(.:format)                               urls#index
+                 POST   /urls(.:format)                               urls#create
+         new_url GET    /urls/new(.:format)                           urls#new
+        edit_url GET    /urls/:id/edit(.:format)                      urls#edit
+             url GET    /urls/:id(.:format)                           urls#show
+                 PUT    /urls/:id(.:format)                           urls#update
+                 DELETE /urls/:id(.:format)                           urls#destroy
+        students GET    /students(.:format)                           students#index
+                 POST   /students(.:format)                           students#create
+     new_student GET    /students/new(.:format)                       students#new
+    edit_student GET    /students/:id/edit(.:format)                  students#edit
+         student GET    /students/:id(.:format)                       students#show
+                 PUT    /students/:id(.:format)                       students#update
+                 DELETE /students/:id(.:format)                       students#destroy
+    student_urls GET    /students/:student_id/urls(.:format)          urls#index
+                 POST   /students/:student_id/urls(.:format)          urls#create
+ new_student_url GET    /students/:student_id/urls/new(.:format)      urls#new
+edit_student_url GET    /students/:student_id/urls/:id/edit(.:format) urls#edit
+     student_url GET    /students/:student_id/urls/:id(.:format)      urls#show
+                 PUT    /students/:student_id/urls/:id(.:format)      urls#update
+                 DELETE /students/:student_id/urls/:id(.:format)      urls#destroy
+                 GET    /students(.:format)                           students#index
+                 POST   /students(.:format)                           students#create
+                 GET    /students/new(.:format)                       students#new
+                 GET    /students/:id/edit(.:format)                  students#edit
+                 GET    /students/:id(.:format)                       students#show
+                 PUT    /students/:id(.:format)                       students#update
+                 DELETE /students/:id(.:format)                       students#destroy
+                        /urls(.:format)                               urls#index
+           error        /error(.:format)                              welcome#error
+  welcome_create        /welcome/create(.:format)                     welcome#create
+                        /welcome/:action(.:format)                    welcome#action
+                        /students(.:format)                           students#view
+            root        /                                             welcome#index
