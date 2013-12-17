@@ -34,8 +34,9 @@ class WelcomeController < ApplicationController
         # If the form doesn't validate we'll just redirect.
         # We have to create a route in config/routes.rb for this to work
         msgs = ''
-        @student.errors.full_messages.each { |msg| msgs = msgs + msg + '\n' }
-        format.html { redirect_to '/error', flash: msgs}
+        @student.errors.full_messages.each { |msg| msgs = msgs + msg + "\n" }
+        flash.now[:error] = msgs
+        # format.html { redirect_to '/error' }
       end
     end
   end
