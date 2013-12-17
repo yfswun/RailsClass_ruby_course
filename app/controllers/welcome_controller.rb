@@ -38,7 +38,7 @@ class WelcomeController < ApplicationController
         # flash.now[:error] = msgs
         # # format.html { render "/urls/new" }
         # format.html { redirect_to  '/error'}
-        format.html { render "urls/new.html.erb" }
+        format.html { render "app/views/urls/new.html.erb" }
         format.json { render json: @url.errors, status: :unprocessable_entity }
       end
     end
