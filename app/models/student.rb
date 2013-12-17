@@ -3,14 +3,9 @@ class Student < ActiveRecord::Base
 
     # Write code allows a student to have many urls
     has_many :urls
-    # validates_associated :urls
-
-    # validates :name, presence: true
 
     # validate that :name is in the list of allowed students
     validate :validate_student_name
-    # validates :name, inclusion: { in: validStudentIDs,
-                                  # message: "%{name} is not in the registered list of student IDs." }
 
     # validate that :course is correct
     validcourses = ['cs 132a', 'cs132a', 'cis 113', 'cis113']

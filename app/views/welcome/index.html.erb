@@ -58,8 +58,8 @@
         <% @students.each do |student| %>
             <% student.urls.each do |studentURL| %>
                 <tr>
-                    <td><%= student.name %></td>
                     <td><%= student.course %></td>
+                    <td><%= student.name %></td>
                     <td><a href="<%= studentURL.url %>"><%= studentURL.url %></a></td>
                 </tr>
             <% end %>
