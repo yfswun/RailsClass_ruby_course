@@ -18,6 +18,21 @@
       <p>Read the <a href="/welcome/assignment">assignment</a>.</p>
       </div>
     </div>
+
+<div class="twelve columns centered panel">
+    <h2>Error List</h2>
+    <% if @student.errors.any? %>
+      <div>
+        <h2><%= pluralize(@student.errors.count, "error") %> prohibited this registration from being saved:</h2>
+        <ul>
+            <% @student.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+        </ul>
+      </div>
+    <% end %>
+</div>
+
     <div class="eight columns" style="background-color:#f0f0f0;">
       <h3>Register your Heroku URL</h3>
       <%= form_for @student, :url => {:action => 'create'} do |f| %>
