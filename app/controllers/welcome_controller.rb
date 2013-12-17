@@ -36,7 +36,7 @@ class WelcomeController < ApplicationController
         msgs = ''
         @student.errors.full_messages.each { |msg| msgs = msgs + msg + "\n" }
         flash.now[:error] = msgs
-        format.html { render '/index' }
+        format.html { redirect_to :back }
       end
     end
   end
