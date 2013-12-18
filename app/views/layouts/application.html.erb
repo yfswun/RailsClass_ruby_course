@@ -46,12 +46,6 @@
   </div>
   <div class="row">
       <div class="twelve columns">
-        <% if flash[:error] %>
-            <p id="flash_error"><%= flash[:error] %></p>
-        <% end %>
-        <% if flash[:notice] %>
-            <p id="flash_notice"><%= flash[:notice] %></p>
-        <% end %>
         <%= yield %>
       </div>
   </div>

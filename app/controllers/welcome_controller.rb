@@ -20,24 +20,31 @@ class WelcomeController < ApplicationController
   end
 
   def create
-        # Create a student
-        # You can see the Students table id db/migrate
-        @student = Student.new({:name => params[:student][:name], :course => params[:student][:course]})
-        # respond_to do |format|
+    # Create a student
+    # You can see the Students table id db/migrate
+    @student = Student.new({:name =>params[:student][:name],:course => params[:student][:course]})
+
+    # Sometimes displaying the error page comes back with a blank page and the following logs:
+    #       Rendered welcome/error.html.erb within layouts/application (0.0ms)
+    #     Completed 406 Not Acceptable in 207ms (Views: 54.7ms | ActiveRecord: 133.8ms)
+    # http://hybernaut.github.io/blog/2012/03/22/rails-controller-returning-406-not-acceptable/
+    # Comment out respond_to and not do json format
+    # respond_to do |format|
         begin
-          # add the URL to the student
-          # Ruby will give the URL the correct student_id
-            if (@student.save and @student.urls.create!({:name => '',:url => params[:url]}))
+            if @student.save and @student.urls.create!({:name => '',:url => params[:url]})
+                # format.html { redirect_to  '/urls', notice: 'Your Heroku application was successfully registered.' }
+                # format.json { render json: @url, status: :created, location: @url }
                 redirect_to  '/urls', notice: 'Your Heroku application was successfully registered.'
             else
-            # If the form doesn't validate we'll just redirect.
-            # We have to create a route in config/routes.rb for this to work
                 render "app/views/students/new.html.erb"
             end
         rescue ActiveRecord::RecordInvalid
-            render 'error'
-        rescue Exception
-            redirect_to '/error'
+            redirect_to  '/error'
+        rescue
+            raise 'error'
+            redirect_to  '/error'
         end
-    end
+    # end
+  end
+
 end
