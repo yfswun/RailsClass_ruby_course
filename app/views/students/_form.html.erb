@@ -1,25 +1,25 @@
-<%= form_for(@student) do |f| %>
+<%= form_for @student, :url => {:action => 'create'} do |f| %>
+
+<p>Student obj class: <% puts @student.class %></p>
+<p><% puts @student %></p>
+<p>ErrorCount<%= @student.errors.count %></p>
+
   <% if @student.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
-
-      <ul>
-      <% @student.errors.full_messages.each do |msg| %>
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this your URL from being registered:</h2>
+      <ul><% @student.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :course %><br />
-    <%= f.text_field :course %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <p><%= f.label :Course %></p>
+  <p><%= f.select :course, options_for_select(['Choose your course',['CS 132A','cs132a'],['CIS 113','cis113']]) %></p>
+  <p><%= f.label :UserID %></p>
+  <p><%= f.text_field :name, :placeholder =>'Your user ID' %></p>
+  <p><%= f.label :URL %></p>
+  <p><input type="url" name="url" placeholder="Heroku URL"/></p>
+  <input type="submit" class="round button" value="Register" />
+
 <% end %>
