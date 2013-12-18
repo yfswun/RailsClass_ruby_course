@@ -31,25 +31,25 @@
       <% end %>
     </div>
 </div>
-
-<div style="margin:1em 0; height:10px;clear:both;"><br /></div>
-
+<div style="margin:1em 0; height:5px;clear:both;"><br /></div>
 <div class="row">
-    <h3>Registered Links</h3>
-    <table style="width:100%">
-        <tr>
-            <th>Course</th>
-            <th>Student ID</th>
-            <th>URL</th>
-        </tr>
-        <% @students.each do |student| %>
-            <% student.urls.each do |studentURL| %>
-                <tr>
-                    <td><%= student.course %></td>
-                    <td><%= student.name %></td>
-                    <td><a href="<%= studentURL.url %>"><%= studentURL.url %></a></td>
-                </tr>
+    <div class="twelve columns" style="background-color:#f0f0f0;">
+        <h3>Registered Links</h3>
+        <table style="width:100%">
+            <tr>
+                <th>Course</th>
+                <th>Student ID</th>
+                <th>URL</th>
+            </tr>
+            <% @students.each do |student| %>
+                <% student.urls.each do |studentURL| %>
+                    <tr>
+                        <td><%= student.course %></td>
+                        <td><%= student.name %></td>
+                        <td><a href="<%= studentURL.url %>"><%= studentURL.url %></a></td>
+                    </tr>
+                <% end %>
             <% end %>
-        <% end %>
-    </table>
+        </table>
+    </div>
 </div>
