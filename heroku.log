@@ -1,0 +1,101 @@
+2013-12-18T15:27:34.230993+00:00 app[web.1]: 
+2013-12-18T15:27:34.230993+00:00 app[web.1]: 
+2013-12-18T15:26:46.363687+00:00 heroku[router]: at=info method=GET path=/assets/application-bec85acc6317293e1e28f313e60ea230.css host=intense-garden-5769.herokuapp.com fwd="173.247.201.186" dyno=web.1 connect=1ms service=12ms status=304 bytes=0
+2013-12-18T15:28:12.467296+00:00 app[web.1]: Started GET "/" for 173.247.201.186 at 2013-12-18 15:28:12 +0000
+2013-12-18T15:28:12.470918+00:00 app[web.1]: Processing by WelcomeController#index as HTML
+2013-12-18T15:28:12.504195+00:00 app[web.1]:   Rendered welcome/index.html.erb within layouts/application (25.3ms)
+2013-12-18T15:28:12.504195+00:00 app[web.1]: Completed 500 Internal Server Error in 33ms
+2013-12-18T15:28:12.506169+00:00 app[web.1]:     35:               </ul>
+2013-12-18T15:28:12.506169+00:00 app[web.1]:     38:         <%= error_messages_for :student %>
+2013-12-18T15:28:12.506169+00:00 app[web.1]:     39:         <%= error_messages_for :url %>
+2013-12-18T15:28:12.506169+00:00 app[web.1]: 
+2013-12-18T15:28:12.506169+00:00 app[web.1]: ActionView::Template::Error (undefined method `error_messages_for' for #<#<Class:0x007fdcb5ac8c50>:0x007fdcb496fc38>):
+2013-12-18T15:28:12.506169+00:00 app[web.1]:     37:         <% end %>
+2013-12-18T15:28:12.506169+00:00 app[web.1]:     40:         <%= form_for @student, :url => {:action => 'create'} do |f| %>
+2013-12-18T15:28:12.506169+00:00 app[web.1]:     41:             <%= f.error_messages %>
+2013-12-18T15:28:12.506169+00:00 app[web.1]:   app/views/welcome/index.html.erb:38:in `_app_views_welcome_index_html_erb__4271311862108791899_70292940694700'
+2013-12-18T15:28:12.506337+00:00 app[web.1]:   app/controllers/welcome_controller.rb:16:in `index'
+2013-12-18T15:28:12.506337+00:00 app[web.1]: 
+2013-12-18T15:28:12.506337+00:00 app[web.1]: 
+2013-12-18T15:28:12.506169+00:00 app[web.1]:     36:             </div>
+2013-12-18T15:28:12.510352+00:00 heroku[router]: at=info method=GET path=/ host=intense-garden-5769.herokuapp.com fwd="173.247.201.186" dyno=web.1 connect=2ms service=54ms status=500 bytes=643
+2013-12-18T15:27:34.248175+00:00 heroku[router]: at=info method=GET path=/ host=intense-garden-5769.herokuapp.com fwd="173.247.201.186" dyno=web.1 connect=13ms service=445ms status=500 bytes=643
+2013-12-18T15:26:47.884161+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=intense-garden-5769.herokuapp.com fwd="173.247.201.186" dyno=web.1 connect=39ms service=71ms status=304 bytes=0
+2013-12-18T15:29:34.779478+00:00 app[web.1]: Started GET "/" for 173.247.201.186 at 2013-12-18 15:29:34 +0000
+2013-12-18T15:29:34.782797+00:00 app[web.1]: Processing by WelcomeController#index as HTML
+2013-12-18T15:29:34.814581+00:00 app[web.1]:   Rendered welcome/index.html.erb within layouts/application (25.8ms)
+2013-12-18T15:29:34.814717+00:00 app[web.1]: Completed 500 Internal Server Error in 32ms
+2013-12-18T15:29:34.817525+00:00 app[web.1]: 
+2013-12-18T15:29:34.817525+00:00 app[web.1]: ActionView::Template::Error (undefined method `error_messages_for' for #<#<Class:0x007fdcb5ac8c50>:0x007fdcb59fdeb0>):
+2013-12-18T15:29:34.817525+00:00 app[web.1]:     36:             </div>
+2013-12-18T15:29:34.817525+00:00 app[web.1]:     37:         <% end %>
+2013-12-18T15:29:34.817525+00:00 app[web.1]:     38:         <%= error_messages_for :student %>
+2013-12-18T15:29:34.817525+00:00 app[web.1]:     40:         <%= form_for @student, :url => {:action => 'create'} do |f| %>
+2013-12-18T15:29:34.817703+00:00 app[web.1]: 
+2013-12-18T15:29:34.817703+00:00 app[web.1]: 
+2013-12-18T15:29:34.821784+00:00 heroku[router]: at=info method=GET path=/ host=intense-garden-5769.herokuapp.com fwd="173.247.201.186" dyno=web.1 connect=2ms service=56ms status=500 bytes=643
+2013-12-18T15:29:34.817525+00:00 app[web.1]:     41:             <%= f.error_messages %>
+2013-12-18T15:29:34.817525+00:00 app[web.1]:   app/views/welcome/index.html.erb:38:in `_app_views_welcome_index_html_erb__4271311862108791899_70292940694700'
+2013-12-18T15:29:34.817703+00:00 app[web.1]:   app/controllers/welcome_controller.rb:16:in `index'
+2013-12-18T15:29:34.817525+00:00 app[web.1]:     35:               </ul>
+2013-12-18T15:29:34.817525+00:00 app[web.1]:     39:         <%= error_messages_for :url %>
+2013-12-18T15:31:03.697520+00:00 app[web.1]: Started GET "/" for 173.247.201.186 at 2013-12-18 15:31:03 +0000
+2013-12-18T15:31:03.701585+00:00 app[web.1]: Processing by WelcomeController#index as HTML
+2013-12-18T15:31:03.822331+00:00 app[web.1]:   Rendered welcome/index.html.erb within layouts/application (107.9ms)
+2013-12-18T15:31:03.824510+00:00 app[web.1]:     38:         <%= error_messages_for :student %>
+2013-12-18T15:31:03.824510+00:00 app[web.1]:     39:         <%= error_messages_for :url %>
+2013-12-18T15:31:03.822598+00:00 app[web.1]: Completed 500 Internal Server Error in 121ms
+2013-12-18T15:31:03.824510+00:00 app[web.1]: 
+2013-12-18T15:31:03.824510+00:00 app[web.1]:     41:             <%= f.error_messages %>
+2013-12-18T15:31:03.824510+00:00 app[web.1]:   app/views/welcome/index.html.erb:38:in `_app_views_welcome_index_html_erb__4271311862108791899_70292940694700'
+2013-12-18T15:31:03.824691+00:00 app[web.1]: 
+2013-12-18T15:31:03.824691+00:00 app[web.1]:   app/controllers/welcome_controller.rb:16:in `index'
+2013-12-18T15:31:03.824510+00:00 app[web.1]: ActionView::Template::Error (undefined method `error_messages_for' for #<#<Class:0x007fdcb5ac8c50>:0x007fdcb5fcc328>):
+2013-12-18T15:31:03.824510+00:00 app[web.1]:     36:             </div>
+2013-12-18T15:31:03.824510+00:00 app[web.1]:     35:               </ul>
+2013-12-18T15:31:03.824510+00:00 app[web.1]:     37:         <% end %>
+2013-12-18T15:31:03.824691+00:00 app[web.1]: 
+2013-12-18T15:31:03.824510+00:00 app[web.1]:     40:         <%= form_for @student, :url => {:action => 'create'} do |f| %>
+2013-12-18T15:31:03.828184+00:00 heroku[router]: at=info method=GET path=/ host=intense-garden-5769.herokuapp.com fwd="173.247.201.186" dyno=web.1 connect=1ms service=147ms status=500 bytes=643
+2013-12-18T15:33:28.162377+00:00 heroku[api]: Starting process with command `bundle exec rake db:migrate` by yfswun@yahoo.com
+2013-12-18T15:33:33.312454+00:00 heroku[run.4579]: State changed from starting to up
+2013-12-18T15:33:33.637651+00:00 heroku[run.4579]: Awaiting client
+2013-12-18T15:33:33.674043+00:00 heroku[run.4579]: Starting process with command `bundle exec rake db:migrate`
+2013-12-18T15:33:37.100121+00:00 heroku[run.4579]: Process exited with status 0
+2013-12-18T15:33:37.115452+00:00 heroku[run.4579]: State changed from up to complete
+2013-12-18T15:33:46.021650+00:00 app[web.1]: Started GET "/" for 173.247.201.186 at 2013-12-18 15:33:46 +0000
+2013-12-18T15:33:46.038270+00:00 app[web.1]: Processing by WelcomeController#index as HTML
+2013-12-18T15:33:46.216986+00:00 app[web.1]:   Rendered welcome/index.html.erb within layouts/application (142.5ms)
+2013-12-18T15:33:46.217419+00:00 app[web.1]: Completed 500 Internal Server Error in 175ms
+2013-12-18T15:33:46.241490+00:00 app[web.1]:     35:               </ul>
+2013-12-18T15:33:46.241490+00:00 app[web.1]:     36:             </div>
+2013-12-18T15:33:46.241490+00:00 app[web.1]: ActionView::Template::Error (undefined method `error_messages_for' for #<#<Class:0x007fdcb5ac8c50>:0x007fdcb437f008>):
+2013-12-18T15:33:46.241490+00:00 app[web.1]:     38:         <%= error_messages_for :student %>
+2013-12-18T15:33:46.241490+00:00 app[web.1]:     39:         <%= error_messages_for :url %>
+2013-12-18T15:33:46.243780+00:00 heroku[router]: at=info method=GET path=/ host=intense-garden-5769.herokuapp.com fwd="173.247.201.186" dyno=web.1 connect=1ms service=263ms status=500 bytes=643
+2013-12-18T15:33:46.241490+00:00 app[web.1]: 
+2013-12-18T15:33:46.241490+00:00 app[web.1]:     37:         <% end %>
+2013-12-18T15:33:46.241666+00:00 app[web.1]:   app/controllers/welcome_controller.rb:16:in `index'
+2013-12-18T15:33:46.241666+00:00 app[web.1]: 
+2013-12-18T15:33:46.241490+00:00 app[web.1]:     41:             <%= f.error_messages %>
+2013-12-18T15:33:46.241490+00:00 app[web.1]:     40:         <%= form_for @student, :url => {:action => 'create'} do |f| %>
+2013-12-18T15:33:46.241490+00:00 app[web.1]:   app/views/welcome/index.html.erb:38:in `_app_views_welcome_index_html_erb__4271311862108791899_70292940694700'
+2013-12-18T15:33:46.241666+00:00 app[web.1]: 
+2013-12-18T15:34:07.416305+00:00 app[web.1]: Started GET "/" for 173.247.201.186 at 2013-12-18 15:34:07 +0000
+2013-12-18T15:34:07.428235+00:00 app[web.1]: Processing by WelcomeController#index as HTML
+2013-12-18T15:34:07.530671+00:00 app[web.1]:   Rendered welcome/index.html.erb within layouts/application (86.0ms)
+2013-12-18T15:34:07.542324+00:00 app[web.1]: Completed 500 Internal Server Error in 109ms
+2013-12-18T15:34:07.545869+00:00 app[web.1]: 
+2013-12-18T15:34:07.545869+00:00 app[web.1]: ActionView::Template::Error (undefined method `error_messages_for' for #<#<Class:0x007fdcb5ac8c50>:0x007fdcb5792608>):
+2013-12-18T15:34:07.545869+00:00 app[web.1]:     36:             </div>
+2013-12-18T15:34:07.545869+00:00 app[web.1]:     37:         <% end %>
+2013-12-18T15:34:07.545869+00:00 app[web.1]:     35:               </ul>
+2013-12-18T15:34:07.545869+00:00 app[web.1]:     38:         <%= error_messages_for :student %>
+2013-12-18T15:34:07.545869+00:00 app[web.1]:   app/views/welcome/index.html.erb:38:in `_app_views_welcome_index_html_erb__4271311862108791899_70292940694700'
+2013-12-18T15:34:07.546076+00:00 app[web.1]:   app/controllers/welcome_controller.rb:16:in `index'
+2013-12-18T15:34:07.546076+00:00 app[web.1]: 
+2013-12-18T15:34:07.545869+00:00 app[web.1]:     40:         <%= form_for @student, :url => {:action => 'create'} do |f| %>
+2013-12-18T15:34:07.545869+00:00 app[web.1]:     39:         <%= error_messages_for :url %>
+2013-12-18T15:34:07.545869+00:00 app[web.1]:     41:             <%= f.error_messages %>
+2013-12-18T15:34:07.546076+00:00 app[web.1]: 
+2013-12-18T15:34:07.547596+00:00 heroku[router]: at=info method=GET path=/ host=intense-garden-5769.herokuapp.com fwd="173.247.201.186" dyno=web.1 connect=2ms service=162ms status=500 bytes=643

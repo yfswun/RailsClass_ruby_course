@@ -35,8 +35,6 @@
               </ul>
             </div>
         <% end %>
-        <%= error_messages_for :student %>
-        <%= error_messages_for :url %>
         <%= form_for @student, :url => {:action => 'create'} do |f| %>
             <%= f.error_messages %>
           <p><%= f.label :Course %></p>
