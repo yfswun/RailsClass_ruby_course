@@ -19,23 +19,44 @@
     </div>
   </div>
     <div class="eight columns" style="background-color:#f0f0f0;">
-      <h3>Register your Heroku URL</h3>
-      <%= form_for @student, :url => {:action => 'create'} do |f| %>
+        <h3>Register your Heroku URL</h3>
+        <% if flash[:error] %>
+            <p id="flash_error"><%= flash[:error] %></p>
+        <% end %>
+        <% if flash[:notice] %>
+            <p id="flash_notice"><%= flash[:notice] %></p>
+        <% end %>
+        <% if @student.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@student.errors.count, "error") %> prohibited your URL from being registered:</h2>
+              <ul><% @student.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+        <%= error_messages_for :student %>
+        <%= error_messages_for :url %>
+        <%= form_for @student, :url => {:action => 'create'} do |f| %>
+            <%= f.error_messages %>
           <p><%= f.label :Course %></p>
-          <p><%= f.select :course, options_for_select(['Choose your course',['CS 132A','cs132a'],['CIS 113','cis113']]) %></p>
+          <p><%= f.select :course,
+                          [['Choose your course',''],['CS 132A','cs132a'],['CIS 113','cis113']],
+                          :required => 'required',
+                          :autofocus => 'autofocus' %></p>
           <p><%= f.label :UserID %></p>
-          <p><%= f.text_field :name, :placeholder =>'Your user ID' %></p>
+          <p><%= f.text_field :name, :placeholder => 'Your user ID', :required => 'required' %></p>
           <p><%= f.label :URL %></p>
-          <p><input type="url" name="url" placeholder="Heroku URL"/></p>
+          <p><input type="url" id="url" name="url" placeholder="heroku url", required='required' /></p>
           <input type="submit" class="round button" value="Register" />
-      <% end %>
+        <% end %>
     </div>
 </div>
 <div style="margin:1em 0; height:5px;clear:both;"><br /></div>
 <div class="row">
     <div class="twelve columns" style="background-color:#f0f0f0;">
         <h3>Registered Links</h3>
-        <table style="width:100%">
+        <table style="width:100%;background-color:#f0f0f0;">
             <tr>
                 <th>Course</th>
                 <th>Student ID</th>

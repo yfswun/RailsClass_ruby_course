@@ -13,7 +13,7 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
-	<title><%= content_for?(:title) ? yield(:title) : "CS 132A Heroku App" %></title>
+	<title><%= content_for?(:title) ? yield(:title) : "Heroku Application Registry" %></title>
   
 	<!-- Included CSS Files -->
 	<%= stylesheet_link_tag    "application" %>
@@ -24,7 +24,7 @@
   <%= csrf_meta_tags %>
   <style>body {padding-top:0px}.dark-background {background-color:#333}</style>
 </head>
-<body style='background-color:#8E92A7'>
+<body style='background-color:#cccccc'>
   <div class="contain-to-grid">
     <nav class="top-bar">
       <ul>
@@ -44,11 +44,15 @@
       </section>
     </nav>
   </div>
-
-
   <div class="row">
       <div class="twelve columns">
-  <%= yield %>
+        <% if flash[:error] %>
+            <p id="flash_error"><%= flash[:error] %></p>
+        <% end %>
+        <% if flash[:notice] %>
+            <p id="flash_notice"><%= flash[:notice] %></p>
+        <% end %>
+        <%= yield %>
       </div>
   </div>
 </body>
