@@ -147,7 +147,6 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 3.2.3)
   sqlite3
-  therubyracer
   turn
   uglifier (>= 1.0.3)
   zurb-foundation (= 3.2.5)
