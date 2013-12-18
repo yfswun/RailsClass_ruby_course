@@ -1,7 +1,14 @@
 <div class="row">
     <div class="twelve columns" style="background-color:#f0f0f0;">
         <h3>Currently Registered URLs</h3>
-        <%= error_messages_for :url %>
+        <% if @url.errors.any? %>
+            <div id="error_explanation">
+              <ul><% @url.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                    <% end %>
+              </ul>
+            </div>
+        <% end %>
         <% if flash[:error] %>
             <p id="flash_error"><%= flash[:error] %></p>
         <% end %>
