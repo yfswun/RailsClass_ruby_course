@@ -1,7 +1,7 @@
 <div class="row">
     <div class="twelve columns" style="background-color:#f0f0f0;">
         <h3>Currently Registered URLs</h3>
-        <% if @url.errors.any? %>
+        <% if not @url.nil? and @url.errors.any? %>
             <div id="error_explanation">
               <ul><% @url.errors.full_messages.each do |msg| %>
                     <li><%= msg %></li>

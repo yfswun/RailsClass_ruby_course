@@ -26,7 +26,7 @@
         <% if flash[:notice] %>
             <p id="flash_notice"><%= flash[:notice] %></p>
         <% end %>
-        <% if @student.errors.any? %>
+        <% if not @student.nil? and @student.errors.any? %>
             <div id="error_explanation">
               <h2><%= pluralize(@student.errors.count, "error") %> prohibited your URL from being registered:</h2>
               <ul><% @student.errors.full_messages.each do |msg| %>
